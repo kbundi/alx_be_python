@@ -4,13 +4,13 @@
   operator = input("Choose the operation (+,-,*,/): ")
 
   match command:
-    case "+":
+    case '+':
       result = num1 + num2
-    case "-":
+    case '-':
       result = num1 - num2
-    case "*":
+    case '*':
       result = num1 * num2
-    case "/":
+    case '/':
       if num2 == '0':
         print("Error: Division by zero is not allowed.")
       else:
