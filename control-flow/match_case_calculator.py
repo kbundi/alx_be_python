@@ -3,7 +3,7 @@
   num2 = float(input("Enter the second number: "))
   operator = input("Choose the operation (+, -, *, /): ")
 
-  match operator:
+  match commands:
     case "+":
       result = num1 + num2
     case "-":
@@ -11,9 +11,8 @@
     case "*":
       result = num1 * num2
     case "/":
-      if num2 == 0:
+      if num2 == '0':
         print("Error: Division by zero is not allowed.")
-        return
       else:
         result = num1 / num2
     case _:
