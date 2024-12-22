@@ -1,19 +1,27 @@
 #!/bin/bash
- num1 = float(input("Enter the first number: "))
-  num2 = float(input("Enter the second number: "))
-  operator = input("Choose the operation (+,-,*,/): ")
+# Prompt the user for the two numbers
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
 
-  match command:
-    case '+':
-      result = num1 + num2
-    case '-':
-      result = num1 - num2
-    case '*':
-      result = num1 * num2
-    case '/':
-      if num2 == '0':
-        print("Error: Division by zero is not allowed.")
-      else:
-        result = num1 / num2
+# Ask for the operation the user would like to perform
+operation = input("Choose the operation (+, -, *, /): ")
+
+# Perform the calculation using Match Case (Python 3.10+)
+match operation:
+    case "+":
+        result = num1 + num2
+        print(f"The result is {result}")
+    case "-":
+        result = num1 - num2
+        print(f"The result is {result}")
+    case "*":
+        result = num1 * num2
+        print(f"The result is {result}")
+    case "/":
+        if num2 == 0:
+            print("Error: Cannot divide by zero.")
+        else:
+            result = num1 / num2
+            print(f"The result is {result}")
     case _:
-      print("Invalid operator. Please choose from +, -, *, /")
+        print("Invalid operation! Please choose one of +, -, *, or /.")
