@@ -1,4 +1,9 @@
-shopping_list = []
+def display_menu():
+    print("Shopping List Manager")
+    print("1. Add Item")
+    print("2. Remove Item")
+    print("3. View List")
+    print("4. Exit")
 
 def add_item():
     item = input("Enter the item to add: ").strip()
@@ -28,23 +33,22 @@ def view_list():
         print("The shopping list is empty.")
 
 def main():
+    shopping_list = []
     while True:
-        print("\nShopping List Manager")
-        print("1. Add Item")
-        print("2. Remove Item")
-        print("3. View List")
-        print("4. Exit")
-
-        choice = input("Enter your choice (1-4): ").strip()
+        display_menu()
+        choice = input("Enter your choice: ")
 
         if choice == '1':
-            add_item()
+             add_item()
         elif choice == '2':
-            remove_item()
+             remove_item()
         elif choice == '3':
             view_list()
         elif choice == '4':
-            print("Exiting the shopping list manager. Goodbye!")
+            print("Goodbye!")
             break
         else:
-            print("Invalid choice. Please enter a number between 1 and 4.")
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
