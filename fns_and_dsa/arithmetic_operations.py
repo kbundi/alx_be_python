@@ -11,17 +11,18 @@ def perform_operation(num1, num2, operation):
             return num1,y,num2
     print(f"invalid operation '{operation}'. Supported operations are:{', '.join(operations)}")
 
-def addition(a,b):
-    return a+b
 
-def subtraction(a,b):
-    return a-b
+if operation == 'add':
+    return num1+num2
 
-def multiplication(a,b):
-    return a*b
+elif operation == 'subtract':
+    return num1-num2
 
-def division(a,b):
-    if b == 0:
-        raise ValueError("cannot divide by zero")
-    return a/b
+elif operation == 'multiply':
+    return num1*num2
+
+elif operation == 'divide':
+    if num2 == '0':
+        return "Error Divieion by Zero"
+    else: return num1/num2
 
