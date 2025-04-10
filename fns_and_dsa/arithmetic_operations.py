@@ -1,14 +1,15 @@
-def perform_operation(num1,num2,operation):
-    operators =  {
-        'add': addition,
-        'subtract': subtraction,
-        'multiply': multiplication,
-        'divide': division
+def perform_operation(num1, num2, operation):
+    operations =  {
+        'add': '+',
+        'subtract': '-',
+        'multiply': '*',
+        'divide': '/'
      }
 
-    if operation not in operators:
-        raise ValueError("please enter correct operator, ie add, subtract,divide")
-    return operators[operation](num1,num2)
+    for x,y in operations.items():
+        if operation == x:
+            return num1,y,num2
+    print(f"invalid operation '{operation}'. Supported operations are:{', '.join(operations)}")
 
 def addition(a,b):
     return a+b
